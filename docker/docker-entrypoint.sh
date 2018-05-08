@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Run chalk to load secrets early
+# (it's ok if this fails)
+eval $(chalk $CHALK_OPTS)
+
 set -euo pipefail
 
 # usage: file_env VAR [DEFAULT]
